@@ -1,1 +1,1 @@
-"Papelaria AfferoLab App" 
+Papelaria AfferoLab App 

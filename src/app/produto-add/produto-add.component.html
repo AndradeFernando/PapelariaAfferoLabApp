@@ -1,0 +1,51 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" [routerLink]="['/produtos']"><mat-icon>list</mat-icon></a>
+  </div>
+  <mat-card class="example-card">
+    <form [formGroup]="produtoForm" (ngSubmit)="onFormSubmit(produtoForm.value)">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="nome do produto" formControlName="nome"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!produtoForm.get('nome').valid && produtoForm.get('nome').touched">Por favor, digite o nome do Produto</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="descricao do produto" formControlName="descricao"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!produtoForm.get('descricao').valid && produtoForm.get('descricao').touched">Por favor, digite o descrição do Produto</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="categoria do produto" formControlName="categoria"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!produtoForm.get('categoria').valid && produtoForm.get('categoria').touched">Por favor, digite o categoria do Produto</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="codigo de barras do produto" formControlName="codigoDeBarras"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!produtoForm.get('codigoDeBarras').valid && produtoForm.get('codigoDeBarras').touched">Por favor, digite o código de Barras do Produto</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="quantidade do produto" formControlName="quantidade"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!produtoForm.get('quantidade').valid && produtoForm.get('quantidade').touched">Por favor, digite a quantidade do Produto</span>
+        </mat-error>
+      </mat-form-field>
+      <div class="button-row">
+        <button type="submit" [disabled]="!produtoForm.valid" mat-flat-button color="primary">Salvar</button>
+      </div>
+    </form>
+  </mat-card>
+</div>

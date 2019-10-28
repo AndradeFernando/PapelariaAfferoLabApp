@@ -1,0 +1,27 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" [routerLink]="['/produtos']"><mat-icon>list</mat-icon></a>
+  </div>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title><h2>{{produto.nome}}</h2></mat-card-title>
+      <mat-card-subtitle>{{produto.descricao}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <dl>
+        <dt>Quantidade</dt>
+        <dd>{{produto.quantidade}}</dd>
+        <dt>Atualizado em:</dt>
+        <dd>{{produto.atualizacao | date}}</dd>
+      </dl>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-flat-button color="primary" [routerLink]="['/produto-edit', produto.id]">Editar</a>
+      <a mat-flat-button color="warn" (click)="deleteProduto(produto.id)">Excluir</a>
+    </mat-card-actions>
+  </mat-card>
+</div>

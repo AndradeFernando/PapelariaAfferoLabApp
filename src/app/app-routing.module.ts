@@ -9,22 +9,22 @@ const routes: Routes = [
   {
     path: 'produtos',
     component: produtosComponent,
-    data: { title: 'List of produtos' }
+    data: { title: 'Lista de Produtos' }
   },
   {
     path: 'produto-details/:id',
     component: produtoDetailComponent,
-    data: { title: 'produto Details' }
+    data: { title: 'Detalhes do Produto' }
   },
   {
     path: 'produto-add',
     component: produtoAddComponent,
-    data: { title: 'Add produto' }
+    data: { title: 'Adicionar Produto' }
   },
   {
     path: 'produto-edit/:id',
     component: produtoEditComponent,
-    data: { title: 'Edit produto' }
+    data: { title: 'Editar Produto' }
   },
   { path: '',
     redirectTo: '/produtos',

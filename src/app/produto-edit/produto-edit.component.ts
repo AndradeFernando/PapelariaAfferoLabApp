@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ApiService } from '../api.service';
+import { ApiService } from '../services/api.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
@@ -36,6 +36,7 @@ export class produtoEditComponent implements OnInit {
     this.api.getproduto(id).subscribe(data => {
       
       this.id = data.id;
+      console.log('id do produto amor:' + this.id);
       this.produtoForm.setValue({
         nome: data.nome,
         descricao: data.descricao,
@@ -52,7 +53,7 @@ export class produtoEditComponent implements OnInit {
       .subscribe(res => {
           let id = res['id'];
           this.isLoadingResults = false;
-          this.router.navigate(['/produto-details', id]);
+          this.router.navigate(['/produtos']);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;

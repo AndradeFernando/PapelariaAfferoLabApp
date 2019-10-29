@@ -9,35 +9,35 @@
   <mat-card class="example-card">
     <form [formGroup]="produtoForm" (ngSubmit)="onFormSubmit(produtoForm.value)">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="nome do produto" formControlName="nome"
+        <input matInput placeholder="Nome" formControlName="nome"
                [errorStateMatcher]="matcher">
         <mat-error>
           <span *ngIf="!produtoForm.get('nome').valid && produtoForm.get('nome').touched">Por favor, digite o nome do Produto</span>
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="descricao do produto" formControlName="descricao"
+        <input matInput placeholder="Descrição" formControlName="descricao"
                [errorStateMatcher]="matcher">
         <mat-error>
           <span *ngIf="!produtoForm.get('descricao').valid && produtoForm.get('descricao').touched">Por favor, digite o descrição do Produto</span>
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="categoria do produto" formControlName="categoria"
+        <input matInput placeholder="Categoria" formControlName="categoria"
                [errorStateMatcher]="matcher">
         <mat-error>
           <span *ngIf="!produtoForm.get('categoria').valid && produtoForm.get('categoria').touched">Por favor, digite o categoria do Produto</span>
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="codigo de barras do produto" formControlName="codigoDeBarras"
+        <input matInput placeholder="cCódigo de Barras" formControlName="codigoDeBarras"
                [errorStateMatcher]="matcher">
         <mat-error>
           <span *ngIf="!produtoForm.get('codigoDeBarras').valid && produtoForm.get('codigoDeBarras').touched">Por favor, digite o código de Barras do Produto</span>
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="quantidade do produto" formControlName="quantidade"
+        <input matInput placeholder="Quantidade" formControlName="quantidade"
                [errorStateMatcher]="matcher">
         <mat-error>
           <span *ngIf="!produtoForm.get('quantidade').valid && produtoForm.get('quantidade').touched">Por favor, digite a quantidade do Produto</span>

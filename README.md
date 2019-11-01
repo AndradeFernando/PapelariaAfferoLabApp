@@ -8,6 +8,6 @@ Para rodar a aplicação poela primeira vez:
 1 - Vá para pasta da aplicacao  no prompt e digite npm install
 2 - ng serve
 
-- Pontos pendentes:
- 1 - Pagina de Login + JWT
+
+
 
